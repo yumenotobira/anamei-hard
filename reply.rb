@@ -20,7 +20,7 @@ begin
         bot.rest.follow(user)
         puts "follow #{user} -reply case"
 
-        text = random_text
+        text = bot.random_text
         bot.tweet(user: user, text: text, inreply_to_status: status)
         puts "random_tweet to #{user}"
       end
