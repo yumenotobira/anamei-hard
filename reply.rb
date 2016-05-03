@@ -21,7 +21,7 @@ begin
         puts "follow #{user} -reply case"
 
         text = bot.random_text
-        bot.tweet(user: user, text: text, inreply_to_status: status)
+        bot.tweet(user: user, text: text, in_reply_to_status: status)
         puts "random_tweet to #{user}"
       end
 

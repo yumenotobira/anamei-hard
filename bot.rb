@@ -37,7 +37,10 @@ class Bot
   def random_text
     ran = (1..7).to_a.shuffle
     url = "http://textage.cc/score/12/_mei.html?1AC00R0#{ran.join}01234567~55-65"
-    return "#{ran[1]} #{ran[2]} #{ran[0]} #{url}"
+    text = []
+    [2,3,1].each{ |i| text << ran.index(i)+1 }
+    text << url
+    return text.join(" ")
   end
 
   def stop_tweet
